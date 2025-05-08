@@ -1,0 +1,9 @@
+0.7
+2020.2
+May  7 2023
+15:10:42
+/home/stud2022/2obrochta/Desktop/Projekt_vivado/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,uvm,,,,,,
+/home/stud2022/2obrochta/Desktop/Projekt_vivado/project_1/project_1.srcs/sim_1/new/testbench.sv,1746720919,systemVerilog,,,,tb_spi_master,,uvm,,,,,,
+/home/stud2022/2obrochta/Desktop/Projekt_vivado/project_1/project_1.srcs/sources_1/imports/new/clkdif.sv,1746720141,systemVerilog,,/home/stud2022/2obrochta/Desktop/Projekt_vivado/project_1/project_1.srcs/sources_1/new/spi.sv,,clkdiv,,uvm,,,,,,
+/home/stud2022/2obrochta/Desktop/Projekt_vivado/project_1/project_1.srcs/sources_1/new/spi.sv,1746721168,systemVerilog,,/home/stud2022/2obrochta/Desktop/Projekt_vivado/project_1/project_1.srcs/sim_1/new/testbench.sv,,spi_master,,uvm,,,,,,
+/home/stud2022/2obrochta/Desktop/Projekt_vivado/project_1/project_1.srcs/sources_1/new/top.sv,1746718753,systemVerilog,,/home/stud2022/2obrochta/Desktop/Projekt_vivado/project_1/project_1.srcs/sim_1/new/testbench.sv,,top,,uvm,,,,,,

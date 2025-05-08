@@ -1,42 +1,25 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 03/20/2025 05:29:53 PM
-// Design Name: 
-// Module Name: clkdiv
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
+module clkdiv (
+    input logic clk,
+    input logic resetn,
+    output logic clk_out
+);
 
-module clkdif #(parameter div=200)(
-    input clk,
-    input reset,
-    output enable
-    );
+    logic [7:0] counter;
 
-localparam n = $clog2(div);
-logic [n-1:0] cnt; 
-    
-always @(posedge clk, posedge reset)
-    if(reset)   
-        cnt <= {n{1'b0}};
-    else if (cnt == div - 1)
-        cnt <= {{1'b0}};
-    else 
-        cnt <= cnt + 1'b1;
+    always @(posedge clk or negedge resetn) begin
+        if (!resetn) begin
+            counter <= 0;
+            clk_out <= 0;
+        end else begin
+            if (counter == 8'd127) begin
+                clk_out <= ~clk_out;
+                counter <= 0;
+            end else begin
+                counter <= counter + 1;
+            end
+        end
+    end
 
-
-assign enable = (cnt == div -1); 
 endmodule
