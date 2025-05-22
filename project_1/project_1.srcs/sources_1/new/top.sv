@@ -11,7 +11,7 @@ module top (
     //D0
 );
 assign {spi_sclk_2, spi_miso_2, spi_sync_2} = {spi_sclk, spi_miso, spi_sync};
-    clkdiv #(.DIVIDER(50)) clk_div_inst1 (
+    clkdiv #(.DIVIDER(50), .OFFSET(3)) clk_div_inst1 (
         .clk(clk),
         .resetn(resetn),
         .clk_out(spi_sclk)

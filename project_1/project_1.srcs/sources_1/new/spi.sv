@@ -31,7 +31,7 @@ module spi_master (
         case(state)
             IDLE: next_state = spi_sync ? TRANSFER : IDLE; 
             TRANSFER: next_state = (bit_count == 4'd15) ? DONE : TRANSFER; 
-            DONE: next_state = IDLE; 
+            DONE: next_state = (spi_sync == 1'b1 ? DONE : IDLE); 
             default: next_state = IDLE;
         endcase
     end
